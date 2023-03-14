@@ -30,4 +30,4 @@ Feel free to check the [issues page](../../issues/).
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-- This was a fun project, regardless of getting the position I'm interested in I get to put my skills into action. Thank you [Simplero](https://simplero.com/) for develivering Interesting project.
+- This was a fun project, regardless of getting the position I'm interested in I get to put some of my skills into action.
