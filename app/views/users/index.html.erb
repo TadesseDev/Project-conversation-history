@@ -9,11 +9,6 @@
           <%= render(CommentComponent.new(comment)) %>
         <% end %>
     </div>
-    <div id="new comment">
-        <%= form_with model: Comment.new(project: @project), url: user_project_comments_path(current_user, @project) do |form| %>
-          <%= form.text_area :text %>
-          <%= form.submit value:  "comment" %>
-        <% end %>
-    </div>
+          <%= render(NewCommentComponent.new(project: @project)) %>
     <%= button_to  'Logout', destroy_user_session_path, method:  :delete %>
 </div>

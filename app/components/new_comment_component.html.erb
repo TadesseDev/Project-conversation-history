@@ -1,0 +1,6 @@
+    <div id="new-comment">
+        <%= form_with model: Comment.new(project: @project), url: user_project_comments_path(current_user, @project) do |form| %>
+          <%= form.text_area :text %>
+          <%= form.submit value:  "comment" %>
+        <% end %>
+    </div>
