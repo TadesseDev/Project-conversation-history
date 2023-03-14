@@ -1,4 +1,8 @@
 <div>
   <h1><%= @project.name%></h1>
+  <%#   render comments using the comment view_component %>
+<% @project.comments.each do |comment| %>
+  <%= render(CommentComponent.new(comment:  @project.comments.first)) %>
+<% end %>
   <%= button_to  'Logout', destroy_user_session_path, method:  :delete %>
 </div>
