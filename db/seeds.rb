@@ -7,7 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 user=User.first
-# project1=Project.create!(name: "Project 1", description: "This is the first project", status: "Active", user:  User.first)
-project1=Project.first
+project1=Project.create!(name: "Project 1", description: "This is the first project", status: "Active", user:  User.first)
+# project1=Project.first
 Comment.create!([{text: "Comment 1", user: user, project: project1},
   {text: "Comment 2", user: user, project: project1}])
