@@ -1,5 +1,5 @@
 <div>
-  <div class="border-4"><h1 class="text-2xl">project conversation history page</h1></div>
+  <div class="border-4 text-center mb-6"><h1 class="text-2xl">project conversation history page</h1></div>
   <div>
   <h2 class="text-xl">Project name: <%= @project.name%></h2>
   <h3 id ="project-status">Project status: <%= @project.status%></h3>
@@ -8,14 +8,14 @@
   <%= button_to 'Update status', user_project_path( current_user, @project), method:  :put, class: "overlay-btn  blue" %>
 
   <%#   render Update histories %>
-<h2>Update histories</h2>
+<h2  class="text-xl underline underline-offset-8"> Update histories</h2>
   <div id="update-histories"  class="ml-4">
     <% @project.update_histories.each do |update_history| %>
       <%= render(UpdateHistoryComponent.new(update_history)) %>
     <% end %>
     </div>
   <%#   render comments using the comment view_component %>
-  <h2>Comments</h2>
+  <h2  class="text-xl underline underline-offset-8">Comments</h2>
     <div id="comments" class="ml-4">
         <% @project.comments.each do |comment| %>
           <%= render(CommentComponent.new(comment)) %>
