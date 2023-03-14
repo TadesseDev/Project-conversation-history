@@ -1,3 +1,4 @@
 <div>
   <%= @project.comments.first.user.email%>
+  <%= button_to  'Logout', destroy_user_session_path, method:  :delete %>
 </div>
