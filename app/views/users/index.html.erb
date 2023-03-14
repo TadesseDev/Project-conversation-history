@@ -1,26 +1,26 @@
 <div>
-  <div><h1>project conversation history page</h1></div>
+  <div class="border-4"><h1 class="text-2xl">project conversation history page</h1></div>
   <div>
-  <h2>Project name: <%= @project.name%></h2>
+  <h2 class="text-xl">Project name: <%= @project.name%></h2>
   <h3 id ="project-status">Project status: <%= @project.status%></h3>
   </div>
 
-  <%= button_to 'Update status', user_project_path( current_user, @project), method:  :put %>
+  <%= button_to 'Update status', user_project_path( current_user, @project), method:  :put, class: "overlay-btn  blue" %>
 
   <%#   render Update histories %>
 <h2>Update histories</h2>
-  <div id="update-histories">
+  <div id="update-histories"  class="ml-4">
     <% @project.update_histories.each do |update_history| %>
       <%= render(UpdateHistoryComponent.new(update_history)) %>
     <% end %>
     </div>
   <%#   render comments using the comment view_component %>
   <h2>Comments</h2>
-    <div id="comments">
+    <div id="comments" class="ml-4">
         <% @project.comments.each do |comment| %>
           <%= render(CommentComponent.new(comment)) %>
         <% end %>
     </div>
           <%= render(NewCommentComponent.new(project: @project)) %>
-    <%= button_to  'Logout', destroy_user_session_path, method:  :delete %>
+    <%= button_to  'Logout', destroy_user_session_path, method:  :delete, class: "overlay-btn " %>
 </div>
