@@ -1,8 +1,8 @@
 require "test_helper"
 
-class RojectsControllerTest < ActionDispatch::IntegrationTest
+class ProjectsControllerTest < ActionDispatch::IntegrationTest
   test "should get update" do
-    get rojects_update_url
+    get projects_update_url
     assert_response :success
   end
 end

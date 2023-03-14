@@ -1,8 +1,19 @@
 <div>
-  <h1><%= @project.name%></h1>
+  <h1>project conversation history page</h1>
+  <h1>Project name: <%= @project.name%></h1>
+
+  <%= button_to 'Update status', user_project_path( current_user, @project) %>
   <%#   render comments using the comment view_component %>
-<% @project.comments.each do |comment| %>
-  <%= render(CommentComponent.new(comment:  @project.comments.first)) %>
-<% end %>
-  <%= button_to  'Logout', destroy_user_session_path, method:  :delete %>
+    <div id="comments">
+        <% @project.comments.each do |comment| %>
+          <%= render(CommentComponent.new(comment:  @project.comments.first)) %>
+        <% end %>
+    </div>
+    <div id="new comment">
+        <%= form_with model: @comment, url: user_project_comments_path(current_user, @project) do |form| %>
+          <%= form.text_area :text %>
+          <%= form.submit value:  "comment" %>
+        <% end %>
+    </div>
+    <%= button_to  'Logout', destroy_user_session_path, method:  :delete %>
 </div>
