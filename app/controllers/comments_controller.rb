@@ -9,9 +9,11 @@ class CommentsController < ApplicationController
     respond_to do |format|
                       if @comment.save!
                                   format.turbo_stream {
-          render turbo_stream: [turbo_stream.append(
+          render turbo_stream: [
+            turbo_stream.append(
             "comments", CommentComponent.new( @comment).render_in(view_context)),
-         turbo_stream.replace( "new-comment", NewCommentComponent.new(project: @project).render_in(view_context))
+         turbo_stream.replace(
+          "new-comment", NewCommentComponent.new(project: @project).render_in(view_context))
         ]
           }
                       else

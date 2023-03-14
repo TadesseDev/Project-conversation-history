@@ -1,9 +1,21 @@
 <div>
-  <h1>project conversation history page</h1>
-  <h1>Project name: <%= @project.name%></h1>
+  <div><h1>project conversation history page</h1></div>
+  <div>
+  <h2>Project name: <%= @project.name%></h2>
+  <h3 id ="project-status">Project status: <%= @project.status%></h3>
+  </div>
 
-  <%= button_to 'Update status', user_project_path( current_user, @project) %>
+  <%= button_to 'Update status', user_project_path( current_user, @project), method:  :put %>
+
+  <%#   render Update histories %>
+<h2>Update histories</h2>
+  <div id="update-histories">
+    <% @project.update_histories.each do |update_history| %>
+      <%= render(UpdateHistoryComponent.new(update_history)) %>
+    <% end %>
+    </div>
   <%#   render comments using the comment view_component %>
+  <h2>Comments</h2>
     <div id="comments">
         <% @project.comments.each do |comment| %>
           <%= render(CommentComponent.new(comment)) %>
