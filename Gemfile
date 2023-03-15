@@ -78,3 +78,5 @@ gem "dotenv-rails", "~> 2.8"
 gem "view_component", "~> 2.82"
 
 gem "tailwindcss-rails", "~> 2.0"
+
+gem "rspec-rails", "~> 6.0", :groups => [:development, :test]

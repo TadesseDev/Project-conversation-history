@@ -15,7 +15,7 @@ Comment.create!([
   {text: "Should  I be worried about the style?  Style is good to make the app looks nice. I think about it a couple of time about how much stile I should be adding. [MY ANSWER] Since there is nothing mentioned about the styling in the requirement specification I consider showing I'm capable of styling with the company tech stack is enough. Thant is why I have used  [tailwindcss]", user: user, project: project1}
   ])
 
-  UpdateHistory.create!(user: user, project: project1)
-  UpdateHistory.create!(user: user, project: project1)
-  UpdateHistory.create!(user: user, project: project1)
+  UpdateHistory.create!(user: user, project: project1, status:  "Active")
+  UpdateHistory.create!(user: user, project: project1, status:  "Active")
+  UpdateHistory.create!(user: user, project: project1, status:  "Active")
 
