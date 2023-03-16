@@ -1,4 +1,4 @@
-# Homey take home project 
+# Project conversation history
 
 > This is a single page application with turbo-stream and view-component to log a history of a project.
 
